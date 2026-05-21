@@ -1,0 +1,14 @@
+stages:
+
+  ingest:
+    cmd: python src/data_ingestion.py
+
+    deps:
+      - src/data_ingestion.py
+
+    outs:
+      - data/weather_data.csv:
+          cache: true
+          persist: true
+
+    desc: "Fetch hourly weather data from Open-Meteo and save weather_data"

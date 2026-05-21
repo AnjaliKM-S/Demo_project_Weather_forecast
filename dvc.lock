@@ -1,0 +1,14 @@
+schema: '2.0'
+stages:
+  ingest:
+    cmd: python src/data_ingestion.py
+    deps:
+    - path: src/data_ingestion.py
+      hash: md5
+      md5: 3fed35d735a8027ad9f223cdb1f5c441
+      size: 2127
+    outs:
+    - path: data/weather_data.csv
+      hash: md5
+      md5: 02c52a1067c10553be0ce29834521786
+      size: 10258
